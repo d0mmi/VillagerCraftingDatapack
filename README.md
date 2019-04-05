@@ -40,7 +40,7 @@ Some recipes require a min Level of the Villager!
     - Gold: Level 3
     - Diamond: Level 4
 ### Level 5:
-    - 5x Scute -> 1x Turtle Helmet
+  - 5x Scute -> 1x Turtle Helmet
 ## Toolsmith:
   - All Tools:
     - Stone: Level 1
