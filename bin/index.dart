@@ -7,7 +7,7 @@ void main(){
 			name:"villagercrafting",
 			target:"../",
 			generate: VillagerWidget(),
-      description: "{\"pack\": {\"pack_format\": 1, \"description\": \"Villager Crafting Datapack by Dommi\"}}"
+      description: "{\"pack\": {\"pack_format\": 1, \"description\": \"Villager Crafting Datapack by D0mmi\"}}"
 		)
 	);
 }
@@ -22,9 +22,9 @@ class VillagerWidget extends Widget {
     recipes.add(VillagerRecipe([Item(ItemType.wheat,count: 3)], [Item(ItemType.bread,count: 1)], VillagerProfession.farmer, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.wheat,count: 3),Item(ItemType.milk_bucket,count: 3),Item(ItemType.sugar,count: 2),Item(ItemType.egg,count: 1)], [Item(Block.cake,count: 1),Item(ItemType.bucket,count: 3),], VillagerProfession.farmer, Range(from: 2)));
     //Fisherman
-    recipes.add(VillagerRecipe([Item(ItemType.dried_kelp,count: 9)], [Item(Block.dried_kelp_block,count: 3)], VillagerProfession.fisherman, Range(from: 1)));
+    recipes.add(VillagerRecipe([Item(ItemType.dried_kelp,count: 9)], [Item(Block.dried_kelp_block,count: 1)], VillagerProfession.fisherman, Range(from: 1)));
     //Shepherd 
-    recipes.add(VillagerRecipe([Item(ItemType.string,count: 9)], [Item(Block.white_wool,count: 1)], VillagerProfession.shepherd, Range(from: 1)));
+    recipes.add(VillagerRecipe([Item(ItemType.string,count: 4)], [Item(Block.white_wool,count: 1)], VillagerProfession.shepherd, Range(from: 1)));
     //Fletcher 
     recipes.add(VillagerRecipe([Item(ItemType.string,count: 3),Item(ItemType.stick,count: 3)], [Item(ItemType.bow,count: 1)], VillagerProfession.fletcher, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.flint,count: 1),Item(ItemType.stick,count: 1),Item(ItemType.feather,count: 1)], [Item(ItemType.arrow,count: 4)], VillagerProfession.fletcher, Range(from: 1)));
@@ -90,13 +90,12 @@ class VillagerWidget extends Widget {
     //Cartographer 
     recipes.add(VillagerRecipe([Item(ItemType.compass,count: 1),Item(ItemType.paper,count: 8)], [Item(ItemType.map,count: 1)], VillagerProfession.cartographer, Range(from: 1)));
     //Leatherworker 
+    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 5)], [Item(ItemType.leather_helmet,count: 1)], VillagerProfession.leatherworker, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.leather,count: 8)], [Item(ItemType.leather_chestplate,count: 1)], VillagerProfession.leatherworker, Range(from: 1)));
-    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 5),Item(ItemType.iron_ingot,count: 2)], [Item(ItemType.saddle,count: 1)], VillagerProfession.leatherworker, Range(from: 5)));
+    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 7)], [Item(ItemType.leather_leggings,count: 1)], VillagerProfession.leatherworker, Range(from: 1)));
+    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 4)], [Item(ItemType.leather_boots,count: 1)], VillagerProfession.leatherworker, Range(from: 1)));
 
-    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 5)], [Item(ItemType.leather_helmet,count: 1)], VillagerProfession.armorer, Range(from: 1)));
-    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 8)], [Item(ItemType.leather_chestplate,count: 1)], VillagerProfession.armorer, Range(from: 1)));
-    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 7)], [Item(ItemType.leather_leggings,count: 1)], VillagerProfession.armorer, Range(from: 1)));
-    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 4)], [Item(ItemType.leather_boots,count: 1)], VillagerProfession.armorer, Range(from: 1)));
+    recipes.add(VillagerRecipe([Item(ItemType.leather,count: 5),Item(ItemType.iron_ingot,count: 2)], [Item(ItemType.saddle,count: 1)], VillagerProfession.leatherworker, Range(from: 5)));
     //Butcher 
     recipes.add(VillagerRecipe([Item(ItemType.porkchop,count: 1)], [Item(ItemType.cooked_porkchop,count: 1)], VillagerProfession.butcher, Range(from: 1)));
     //Mason‌
@@ -111,7 +110,7 @@ class VillagerWidget extends Widget {
     load: File(
       path: 'load',
       child: For.of([
-        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.0 by ",color: Color.Gold),TextComponent("Dommi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
+        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.0 by ",color: Color.Gold),TextComponent("D0mmi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
         Tellraw(Entity.All(),show: [TextComponent("Submit Bugs or Suggestions ",color: Color.Gold),TextComponent("here!",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi/VillagerCraftingDatapack/issues/new"))]),
       ])
     )
