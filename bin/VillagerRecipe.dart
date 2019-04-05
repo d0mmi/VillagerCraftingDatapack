@@ -25,7 +25,6 @@ class VillagerProfession{
       return profession;
     }
 }
-
 class VillagerRecipe extends Widget{
 
   List<Item> components;
@@ -33,9 +32,9 @@ class VillagerRecipe extends Widget{
   List<Widget> _cmds = [];
   VillagerProfession profession;
   Range level;
+  static int recipecount = 1;
 
   VillagerRecipe(this.components, this.results,this.profession,this.level){
-
     List<ItemSelector> itemSelectors = [];
     List<Condition> conditions = [];
     List<Widget> then = [];
@@ -61,14 +60,18 @@ class VillagerRecipe extends Widget{
       then.add(Command("/summon minecraft:item ~ ~ ~ "+ItemSelector(item).getNBT()));
     }
     if(level.from == null || level.from == 0) level.from = 1;
-    if(level.to == null || level.to == 0) level.to = level.from;
+    if(level.to == null || level.to == 0) level.to = 5;
+
+    String professionName = profession.toString().substring(10);
+
     for(int i = level.from; i <= level.to;i++){
       _cmds.add(Execute.asat(Entity(type: EntityType.villager, nbt: {"VillagerData":{"profession":profession.toString(),"level":i}}),children: [
-        File.execute(path: "recipes/"+profession.toString().substring(10)+i.toString(), child: For.of([
+        File.execute(path: "recipes/"+professionName+"/"+i.toString()+"/"+professionName+recipecount.toString(), child: For.of([
           If(workCon, assignTag: Entity(selector: 's'), Then: [
             If(Condition.and(conditions),assignTag: Entity(selector: 's'),Then: then)
           ])]))
       ]));
+      recipecount++;
     }
   }
 
