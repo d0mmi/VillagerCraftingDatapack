@@ -1,6 +1,6 @@
 # VillagerCraftingDatapack
-A Datapack that enables Villager Crafting using [objD](https://github.com/Stevertus/objD)
-[Suggestions/Bugs](https://github.com/d0mmi/VillagerCraftingDatapack/issues/new)
+- A Datapack that enables Villager Crafting using [objD](https://github.com/Stevertus/objD)
+- [Suggestions/Bugs](https://github.com/d0mmi/VillagerCraftingDatapack/issues/new)
 # How does it work:
 You need to drop the exact number of items within a block distance to the villager.
 If the villager stands right next to his workstation he will craft this items together.
