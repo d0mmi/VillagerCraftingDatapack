@@ -40,9 +40,13 @@ class VillagerWidget extends Widget {
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 1),Item(Block.spruce_planks,count: 2)], [Item(ItemType.wooden_sword,count: 1)], VillagerProfession.weaponsmith, Range(from: 1)));
 
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 1),Item(Block.cobblestone,count: 2)], [Item(ItemType.stone_sword,count: 1)], VillagerProfession.weaponsmith, Range(from: 2)));
+    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(Block.cobblestone,count: 3)], [Item(ItemType.stone_axe,count: 1)], VillagerProfession.weaponsmith, Range(from: 2)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 1),Item(ItemType.iron_ingot,count: 2)], [Item(ItemType.iron_sword,count: 1)], VillagerProfession.weaponsmith, Range(from: 3)));
+    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.iron_ingot,count: 3)], [Item(ItemType.iron_axe,count: 1)], VillagerProfession.weaponsmith, Range(from: 3)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 1),Item(ItemType.gold_ingot,count: 2)], [Item(ItemType.golden_sword,count: 1)], VillagerProfession.weaponsmith, Range(from: 4)));
+    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.gold_ingot,count: 3)], [Item(ItemType.golden_axe,count: 1)], VillagerProfession.weaponsmith, Range(from: 4)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 1),Item(ItemType.diamond,count: 2)], [Item(ItemType.diamond_sword,count: 1)], VillagerProfession.weaponsmith, Range(from: 5)));
+    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.diamond,count: 3)], [Item(ItemType.diamond_axe,count: 1)], VillagerProfession.weaponsmith, Range(from: 5)));
     //Armorer 
     recipes.add(VillagerRecipe([Item(ItemType.iron_ingot,count: 5)], [Item(ItemType.iron_helmet,count: 1)], VillagerProfession.armorer, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.iron_ingot,count: 8)], [Item(ItemType.iron_chestplate,count: 1)], VillagerProfession.armorer, Range(from: 1)));
@@ -69,22 +73,18 @@ class VillagerWidget extends Widget {
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(Block.cobblestone,count: 1)], [Item(ItemType.stone_shovel,count: 1)], VillagerProfession.toolsmith, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(Block.cobblestone,count: 2)], [Item(ItemType.stone_hoe,count: 1)], VillagerProfession.toolsmith, Range(from: 1)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(Block.cobblestone,count: 3)], [Item(ItemType.stone_pickaxe,count: 1)], VillagerProfession.toolsmith, Range(from: 1)));
-    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(Block.cobblestone,count: 4)], [Item(ItemType.stone_axe,count: 1)], VillagerProfession.toolsmith, Range(from: 1)));
 
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.iron_ingot,count: 1)], [Item(ItemType.iron_shovel,count: 1)], VillagerProfession.toolsmith, Range(from: 2)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.iron_ingot,count: 2)], [Item(ItemType.iron_hoe,count: 1)], VillagerProfession.toolsmith, Range(from: 2)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.iron_ingot,count: 3)], [Item(ItemType.iron_pickaxe,count: 1)], VillagerProfession.toolsmith, Range(from: 2)));
-    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.iron_ingot,count: 4)], [Item(ItemType.iron_axe,count: 1)], VillagerProfession.toolsmith, Range(from: 2)));
 
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.gold_ingot,count: 1)], [Item(ItemType.golden_shovel,count: 1)], VillagerProfession.toolsmith, Range(from: 3)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.gold_ingot,count: 2)], [Item(ItemType.golden_hoe,count: 1)], VillagerProfession.toolsmith, Range(from: 3)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.gold_ingot,count: 3)], [Item(ItemType.golden_pickaxe,count: 1)], VillagerProfession.toolsmith, Range(from: 3)));
-    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.gold_ingot,count: 4)], [Item(ItemType.golden_axe,count: 1)], VillagerProfession.toolsmith, Range(from: 3)));
 
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.diamond,count: 1)], [Item(ItemType.diamond_shovel,count: 1)], VillagerProfession.toolsmith, Range(from: 4)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.diamond,count: 2)], [Item(ItemType.diamond_hoe,count: 1)], VillagerProfession.toolsmith, Range(from: 4)));
     recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.diamond,count: 3)], [Item(ItemType.diamond_pickaxe,count: 1)], VillagerProfession.toolsmith, Range(from: 4)));
-    recipes.add(VillagerRecipe([Item(ItemType.stick,count: 2),Item(ItemType.diamond,count: 4)], [Item(ItemType.diamond_axe,count: 1)], VillagerProfession.toolsmith, Range(from: 4)));
     //Librarian 
     recipes.add(VillagerRecipe([Item(ItemType.paper,count: 3),Item(ItemType.leather,count: 1)], [Item(ItemType.book,count: 1)], VillagerProfession.librarian, Range(from: 1)));
     //Cartographer 

@@ -27,8 +27,13 @@ Some recipes require a min Level of the Villager!
 ### Level 1:
   - 1x Slime Ball + 1x Blaze Powder -> 1x Magma Cream
 ## Weaponsmith:
-  - All Swords:
+  - All Swords (1x Stick + 2x Material):
     - Wood: Level 1
+    - Stone: Level 2
+    - Iron: Level 3
+    - Gold: Level 4
+    - Diamond: Level 5
+  - Axe (2x Stick + 3x Material):
     - Stone: Level 2
     - Iron: Level 3
     - Gold: Level 4
@@ -48,7 +53,7 @@ Some recipes require a min Level of the Villager!
     - Iron: Level 2
     - Gold: Level 3
     - Diamond: Level 4
-  - Materials: Shovel 1; Hoe 2; Pickaxe 3; Axe 4;
+  - Materials: Shovel 1; Hoe 2; Pickaxe 3
 ## Librarian:
 ### Level 1:
   - 3x Paper + 1x Leather -> 1x Book
