@@ -3,33 +3,45 @@ import './ItemSelector.dart';
 
 class VillagerProfession{
 
-  static const VillagerProfession farmer = VillagerProfession("minecraft:farmer", Block.composter);
-  static const VillagerProfession fisherman = VillagerProfession("minecraft:fisherman", Block.barrel);
-  static const VillagerProfession shepherd = VillagerProfession("minecraft:shepherd", Block.loom);
-  static const VillagerProfession fletcher = VillagerProfession("minecraft:fletcher", Block.fletching_table);
-  static const VillagerProfession cleric = VillagerProfession("minecraft:cleric", Block.brewing_stand);
-  static const VillagerProfession weaponsmith = VillagerProfession("minecraft:weaponsmith", Block.grindstone);
-  static const VillagerProfession armorer = VillagerProfession("minecraft:armorer", Block.blast_furnace);
-  static const VillagerProfession toolsmith = VillagerProfession("minecraft:toolsmith", Block.smithing_table);
-  static const VillagerProfession librarian = VillagerProfession("minecraft:librarian", Block.lectern);
-  static const VillagerProfession cartographer = VillagerProfession("minecraft:cartographer", Block.cartography_table);
-  static const VillagerProfession leatherworker = VillagerProfession("minecraft:leatherworker", Block.cauldron);
-  static const VillagerProfession butcher = VillagerProfession("minecraft:butcher", Block.smoker);
-  static const VillagerProfession mason = VillagerProfession("minecraft:mason", Block.stonecutter);
+  static VillagerProfession farmer = VillagerProfession("minecraft:farmer", Block.composter);
+  static VillagerProfession fisherman = VillagerProfession("minecraft:fisherman", Block.barrel);
+  static VillagerProfession shepherd = VillagerProfession("minecraft:shepherd", Block.loom);
+  static VillagerProfession fletcher = VillagerProfession("minecraft:fletcher", Block.fletching_table);
+  static VillagerProfession cleric = VillagerProfession("minecraft:cleric", Block.brewing_stand);
+  static VillagerProfession weaponsmith = VillagerProfession("minecraft:weaponsmith", Block.grindstone);
+  static VillagerProfession armorer = VillagerProfession("minecraft:armorer", Block.blast_furnace);
+  static VillagerProfession toolsmith = VillagerProfession("minecraft:toolsmith", Block.smithing_table);
+  static VillagerProfession librarian = VillagerProfession("minecraft:librarian", Block.lectern);
+  static VillagerProfession cartographer = VillagerProfession("minecraft:cartographer", Block.cartography_table);
+  static VillagerProfession leatherworker = VillagerProfession("minecraft:leatherworker", Block.cauldron);
+  static VillagerProfession butcher = VillagerProfession("minecraft:butcher", Block.smoker);
+  static VillagerProfession mason = VillagerProfession("minecraft:mason", Block.stonecutter);
+  static List<VillagerProfession> professions = [];
 
   final String profession;
   final Block workspace;
-  const VillagerProfession(this.profession,this.workspace);
+  List<Widget> professionRecipes = [];
+  int recipecount = 1;
+  VillagerProfession(this.profession,this.workspace){
+    professions.add(this);
+  }
+
+  Widget getRecipes(){
+    String professionName = profession.toString().substring(10);
+    return Execute.asat(Entity(type: EntityType.villager, nbt: {"VillagerData":{"profession":profession.toString()}}),children: [
+      File.execute(path: "recipes/"+professionName+"/main",child: For.of(professionRecipes))
+      ]);
+  }
+
   @override
     String toString() {
       return profession;
     }
 }
-class VillagerRecipe extends Widget{
+class VillagerRecipe{
 
   List<Item> components;
   List<Item> results;
-  List<Widget> _cmds = [];
   VillagerProfession profession;
   Range level;
   static int recipecount = 1;
@@ -63,22 +75,16 @@ class VillagerRecipe extends Widget{
     if(level.to == null || level.to == 0) level.to = 5;
 
     String professionName = profession.toString().substring(10);
-
     for(int i = level.from; i <= level.to;i++){
-      _cmds.add(Execute.asat(Entity(type: EntityType.villager, nbt: {"VillagerData":{"profession":profession.toString(),"level":i}}),children: [
-        File.execute(path: "recipes/"+professionName+"/"+i.toString()+"/"+professionName+recipecount.toString(), child: For.of([
-          If(workCon, assignTag: Entity(selector: 's'), Then: [
-            If(Condition.and(conditions),assignTag: Entity(selector: 's'),Then: then)
+      profession.professionRecipes.add(
+          Execute.asat(Entity.Selected(nbt: {"VillagerData":{"level":i}}),children: [
+            File.execute(path: "recipes/"+professionName+"/"+i.toString()+"/"+professionName+profession.recipecount.toString(), child: For.of([
+              If(workCon, assignTag: Entity(selector: 's'), Then: [
+                If(Condition.and(conditions),assignTag: Entity(selector: 's'),Then: then)
           ])]))
-      ]));
-      recipecount++;
+          ]));
+      profession.recipecount++;
     }
-  }
-
-  @override
-  generate(Context context) {
-
-    return For.of(_cmds);
   }
 
 }
