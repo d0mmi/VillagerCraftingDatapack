@@ -160,7 +160,7 @@ class VillagerWidget extends Widget {
     load: File(
       path: 'load',
       child: For.of([
-        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.2 by ",color: Color.Gold),TextComponent("D0mmi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
+        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.3 by ",color: Color.Gold),TextComponent("D0mmi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
         Tellraw(Entity.All(),show: [TextComponent("Submit Bugs or Suggestions ",color: Color.Gold),TextComponent("here!",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi/VillagerCraftingDatapack/issues/new"))]),
       ])
     )
