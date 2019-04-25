@@ -98,7 +98,52 @@ class VillagerWidget extends Widget {
     //Butcher 
     VillagerRecipe([Item(ItemType.porkchop,count: 1)], [Item(ItemType.cooked_porkchop,count: 1)], VillagerProfession.butcher, Range(from: 1));
     //Mason‌
-    VillagerRecipe([Item(Block.cobblestone,count: 1)], [Item(Block.cobblestone_stairs,count: 1)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.cobblestone,count: 6)], [Item(Block.cobblestone_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.cobblestone,count: 3)], [Item(Block.cobblestone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+    
+    VillagerRecipe([Item(Block.mossy_cobblestone,count: 6)], [Item(Block.mossy_cobblestone_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.mossy_cobblestone,count: 3)], [Item(Block.mossy_cobblestone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.stone,count: 6)], [Item(Block.stone_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.stone,count: 3)], [Item(Block.stone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.smooth_stone,count: 3)], [Item(Block.smooth_stone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.stone_bricks,count: 6)], [Item(Block.stone_brick_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.stone_bricks,count: 3)], [Item(Block.stone_brick_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.mossy_stone_bricks,count: 6)], [Item(Block.mossy_stone_brick_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.mossy_stone_bricks,count: 3)], [Item(Block.mossy_stone_brick_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.diorite,count: 6)], [Item(Block.diorite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.diorite,count: 3)], [Item(Block.diorite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.polished_diorite,count: 6)], [Item(Block.polished_diorite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.polished_diorite,count: 3)], [Item(Block.polished_diorite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.andesite,count: 6)], [Item(Block.andesite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.andesite,count: 3)], [Item(Block.andesite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.polished_andesite,count: 6)], [Item(Block.polished_andesite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.polished_andesite,count: 3)], [Item(Block.polished_andesite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.granite,count: 6)], [Item(Block.granite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.granite,count: 3)], [Item(Block.granite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.polished_granite,count: 6)], [Item(Block.polished_granite_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.polished_granite,count: 3)], [Item(Block.polished_granite_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+
+    VillagerRecipe([Item(Block.quartz_block,count: 6)], [Item(Block.quartz_stairs,count: 4)], VillagerProfession.mason, Range(from: 2));
+    VillagerRecipe([Item(Block.quartz_block,count: 3)], [Item(Block.quartz_slab,count: 6)], VillagerProfession.mason, Range(from: 2));
+
+    VillagerRecipe([Item(Block.nether_bricks,count: 6)], [Item(Block.nether_brick_stairs,count: 4)], VillagerProfession.mason, Range(from: 2));
+    VillagerRecipe([Item(Block.nether_bricks,count: 3)], [Item(Block.nether_brick_slab,count: 6)], VillagerProfession.mason, Range(from: 2));
+
+    VillagerRecipe([Item(Block.red_nether_bricks,count: 6)], [Item(Block.red_nether_brick_stairs,count: 4)], VillagerProfession.mason, Range(from: 2));
+    VillagerRecipe([Item(Block.red_nether_bricks,count: 3)], [Item(Block.red_nether_brick_slab,count: 6)], VillagerProfession.mason, Range(from: 2));
+
+    VillagerRecipe([Item(Block.end_stone_bricks,count: 6)], [Item(Block.end_stone_brick_stairs,count: 4)], VillagerProfession.mason, Range(from: 3));
+    VillagerRecipe([Item(Block.end_stone_bricks,count: 3)], [Item(Block.end_stone_brick_slab,count: 6)], VillagerProfession.mason, Range(from: 3));
 
     
     List<Widget> recipes = [];

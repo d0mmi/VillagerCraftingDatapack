@@ -69,6 +69,12 @@ Some recipes require a min Level of the Villager!
 ### Level 1:
   - 1x porkchop -> 1x Cooked Porkchop
 ## Mason:
+  - 6x Material -> 4x Stairs
+  - 3x Material -> 6x Slabs
 ### Level 1:
-  - 1x Cobblestone -> 1x Cobblestone Stairs
+  - Materials: mossy-/cobblestone, smooth-/stone, mossy-/stone bricks, polished-/diorite, polished-/granite, polished-/andesite
+### Level 2:
+  - Materials: quartz, red-/netherbricks
+### Level 3:
+  - Materials: endstonebricks
 # More Coming Soon..
