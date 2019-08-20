@@ -5,7 +5,7 @@ void main(){
 	createProject(
 		Project(
 			name:"villagercrafting",
-			target:"../",
+			target:"./",
 			generate: VillagerWidget(),
       description: "{\"pack\": {\"pack_format\": 1, \"description\": \"Villager Crafting Datapack by D0mmi\"}}"
 		)
@@ -106,6 +106,7 @@ class VillagerWidget extends Widget {
 
     VillagerRecipe([Item(Block.stone,count: 6)], [Item(Block.stone_stairs,count: 4)], VillagerProfession.mason, Range(from: 1));
     VillagerRecipe([Item(Block.stone,count: 3)], [Item(Block.stone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
+    VillagerRecipe([Item(Block.stone,count: 4)], [Item(Block.stone_bricks,count: 4)], VillagerProfession.mason, Range(from: 1));
 
     VillagerRecipe([Item(Block.smooth_stone,count: 3)], [Item(Block.smooth_stone_slab,count: 6)], VillagerProfession.mason, Range(from: 1));
 
@@ -154,13 +155,13 @@ class VillagerWidget extends Widget {
 		return Pack(
 		name: "villagercrafting",
 		main: File(
-			path: 'main',
+			'main',
       child: For.of(recipes)
 		),
     load: File(
-      path: 'load',
+      'load',
       child: For.of([
-        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.3 by ",color: Color.Gold),TextComponent("D0mmi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
+        Tellraw(Entity.All(),show: [TextComponent("Villager Crafting v1.4 by ",color: Color.Gold),TextComponent("D0mmi",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi")),TextComponent(" Loaded!",color: Color.Gold)]),
         Tellraw(Entity.All(),show: [TextComponent("Submit Bugs or Suggestions ",color: Color.Gold),TextComponent("here!",color: Color.Aqua,clickEvent: TextClickEvent.open_url("https://github.com/d0mmi/VillagerCraftingDatapack/issues/new"))]),
       ])
     )

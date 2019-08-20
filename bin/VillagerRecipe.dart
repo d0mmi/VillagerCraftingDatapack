@@ -29,7 +29,7 @@ class VillagerProfession{
   Widget getRecipes(){
     String professionName = profession.toString().substring(10);
     return Execute.asat(Entity(type: EntityType.villager, nbt: {"VillagerData":{"profession":profession.toString()}}),children: [
-      File.execute(path: "recipes/"+professionName+"/main",child: For.of(professionRecipes))
+      File.execute("recipes/"+professionName+"/main",child: For.of(professionRecipes))
       ]);
   }
 
@@ -78,7 +78,7 @@ class VillagerRecipe{
     for(int i = level.from; i <= level.to;i++){
       profession.professionRecipes.add(
           Execute.asat(Entity.Selected(nbt: {"VillagerData":{"level":i}}),children: [
-            File.execute(path: "recipes/"+professionName+"/"+i.toString()+"/"+professionName+profession.recipecount.toString(), child: For.of([
+            File.execute("recipes/"+professionName+"/"+i.toString()+"/"+professionName+profession.recipecount.toString(), child: For.of([
               If(workCon, assignTag: Entity(selector: 's'), Then: [
                 If(Condition.and(conditions),assignTag: Entity(selector: 's'),Then: then)
           ])]))
