@@ -72,6 +72,7 @@ Some recipes require a min Level of the Villager!
   - 6x Material -> 4x Stairs
   - 3x Material -> 6x Slabs
 ### Level 1:
+  - 4x Stone -> 4x Stone Brick
   - Materials: mossy-/cobblestone, smooth-/stone, mossy-/stone bricks, polished-/diorite, polished-/granite, polished-/andesite
 ### Level 2:
   - Materials: quartz, red-/netherbricks
